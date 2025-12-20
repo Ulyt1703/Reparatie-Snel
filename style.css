@@ -1,0 +1,333 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Nunito';
+}
+
+.header-main {
+    background-color: #2D3142;
+    width: auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+}
+
+.logo-main {
+    position: absolute;
+    width: 110px;
+    left: 60px;
+    top: 10px;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.logo-main:hover {
+    transform: scale(1.03);
+}
+
+.header-list {
+    font-size: 22px;
+    display: flex;
+    gap: 80px;
+    font-weight: 600;
+}
+
+.header-select {
+    position: relative;
+    color: #FFF;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+
+.header-select::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: rgb(0, 158, 8);
+    width: 0;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+.header-select::after {
+    bottom: 0;
+}
+
+.header-select:hover::after {
+    width: 100%;
+}
+.nav-menu{
+    display: none;
+    user-select: none;
+}
+
+.title-main-2 {
+    display: none;
+}
+
+.title-main {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 22%;
+    transform: translate(-50%, -50%);
+    color: #2b2d37;
+    user-select: none;
+}
+
+.main__block-info {
+    max-width: 950px;
+    margin: 110px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.block-descr {
+    width: 340px;
+    padding: 25px 28px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    color: #2D3142;
+    font-size: 18px;
+    line-height: 1.6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
+
+.block-descr:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.block-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.img-info,
+.img-info-2 {
+    width: 210px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    user-select: none;
+}
+
+.img-info:hover,
+.img-info-2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.footer-main {
+    position: relative;
+    width: auto;
+    height: 40px;
+    bottom: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.footer-text-2{
+    display: none;
+}
+
+
+
+/* Responsive */
+
+
+
+@media(max-width: 1199px) {
+    .title-main {
+        font-size: 27px;
+    }
+}
+
+@media(max-width: 991px) {
+    .title-main {
+        font-size: 25px;
+    }
+
+    .main__block-info {
+        flex-direction: column;
+    }
+    .header-list{
+        display: none;
+    }
+    .nav-menu.active-menu{
+        position: fixed;
+        display: flex;
+        opacity: 1;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120vh;
+        background-color: #2D3142;
+        z-index: 10000;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        text-align: center;
+        padding: 90px 0 0 0;
+    }
+    .menu-header{
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        margin: 0 auto;
+        margin-top: 110px;
+    }
+    .header__menu-select{
+        padding: 6px;
+        color: #FFF;
+        font-size: 35px;
+        text-decoration: none;
+        text-decoration-style: none;
+    }
+    .header__menu-select:hover{
+        opacity: 0.8;
+    }
+    .logo-menu{
+        position: relative;
+        width: 140px;
+        transition: 1.5s;
+        -webkit-tap-highlight-color: transparent;
+        top: -20px;
+        transition: 0.2s;
+    }
+    .logo-menu:hover{
+        transform: scale(1.03);
+    }
+}
+
+@media(max-width: 940px) {
+    .title-main {
+        font-size: 23px;
+    }
+}
+
+@media(max-width: 860px) {
+    .title-main {
+        font-size: 21px;
+    }
+}
+
+@media(max-width: 786px) {
+    .title-main {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .title-main {
+        display: none;
+    }
+
+    .title-main-2 {
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        transform: translate(-50%, -50%);
+        display: block;
+        text-align: center;
+        display: block;
+        color: #2b2d37;
+        user-select: none;
+        font-size: 29px;
+    }
+
+    .main__block-info {
+        margin: 200px auto;
+    }
+    .footer-text{
+        display: none;
+    }
+    .footer-text-2{
+        display: block;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media(max-width: 626px) {
+    .title-main-2 {
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        transform: translate(-50%, -50%);
+        display: block;
+        text-align: center;
+        display: block;
+        color: #2b2d37;
+        user-select: none;
+        font-size: 25px;
+    }
+}
+@media(max-width: 575px) {
+    .title-main-2 {
+        font-size: 22px;
+    }
+    .logo-main{
+        left: 20px;
+    }
+    .block-descr{
+        font-size: 15px;
+    }
+    .main__block-info {
+        margin: 170px auto;
+    }
+}
+@media(max-width: 477px) {
+    .title-main-2 {
+        font-size: 19px;
+    }
+}
+@media(max-width: 416px) {
+    .title-main-2 {
+        font-size: 16px;
+        top: 26%;
+    }
+    .block-descr{
+        font-size: 12px;
+    }
+    .block-descr{
+        width: 270px;
+    }
+    .footer-text-2{
+        font-size: 12.5px;
+    }
+}
+@media(max-width: 353px) {
+    .title-main-2 {
+        font-size: 14.5px;
+    }
+}
